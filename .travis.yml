@@ -1,0 +1,17 @@
+---
+before_install:
+- go version
+- /home/travis/.gimme/versions/go1.7.4.linux.amd64/bin/go || true
+- /home/travis/.gimme/versions/go1.7.4.linux.amd64/bin/go version || true
+- gimme || true # https://github.com/travis-ci/gimme
+- which gimme || true
+- gimme help
+- gimme list
+- gimme stable
+- gimme list
+- go version
+- gimme force stable
+- gimme list
+- go version
+# - go install 1.x # https://docs.travis-ci.com/user/reference/trusty/
+script: true
