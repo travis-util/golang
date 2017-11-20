@@ -4,6 +4,7 @@ addons:
     sources:
     # - sourceline: 'ppa:gophers/archive' # better use gimme
     # - sourceline: 'ppa:longsleep/golang-backports' # better use gimme
+
 before_install:
 - go version
 - /home/travis/.gimme/versions/go1.7.4.linux.amd64/bin/go || true
@@ -19,4 +20,7 @@ before_install:
 - gimme list
 - go version
 # - go install 1.x # https://docs.travis-ci.com/user/reference/trusty/
+- printenv GOPATH
+- go get -u github.com/jingweno/ccat
+
 script: true
