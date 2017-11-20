@@ -1,4 +1,9 @@
 ---
+addons:
+  apt:
+    sources:
+    # - sourceline: 'ppa:gophers/archive' # better use gimme
+    # - sourceline: 'ppa:longsleep/golang-backports' # better use gimme
 before_install:
 - go version
 - /home/travis/.gimme/versions/go1.7.4.linux.amd64/bin/go || true
