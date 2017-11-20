@@ -21,6 +21,9 @@ before_install:
 - go version
 # - go install 1.x # https://docs.travis-ci.com/user/reference/trusty/
 - printenv GOPATH
+
+install: # example code for ccat
 - go get -u github.com/jingweno/ccat
+- $GOPATH/bin/ccat .travis.yml
 
 script: true
